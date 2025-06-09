@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
   //Datos para el gráfico de líneas
 const dataLine1 = {
-  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5', 'Día 6'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 19',
-    data: [11, 15, 16, 19, 15, 25], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 21',
+    data: [9, 13, 11, 9, 18], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -14,10 +14,11 @@ const dataLine1 = {
 };
 
 const dataLine2 = {
-  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5', 'Día 6'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 20',
-    data: [14, 13, 19, 13, 13, 25], // Datos de los km recorridos en cada día    borderColor: 'rgba(153, 102, 255, 1)',
+    label: 'Km recorridos en Semana 22',
+    data: [12, 18, 10, 10, 10, 15], // Datos de los km recorridos en cada día
+    borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
   }]
@@ -107,18 +108,5 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 1").appendChild(video2);
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
-
-  const audios = document.querySelectorAll("audio");
-
-  audios.forEach(audio => {
-    audio.addEventListener("play", () => {
-      audios.forEach(otherAudio => {
-        if (otherAudio !== audio) {
-          otherAudio.pause();
-        }
-      });
-    });
-  });
-
 
 });
